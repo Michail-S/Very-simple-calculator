@@ -1,39 +1,46 @@
 import time
 
-
 print("Welcome")
 time.sleep(1)
 
 
-
-is_operation_correct = False
-while is_operation_correct == False:
+while True:
   operation = input("What operation do you want to perform? (+, -, /, *): ").lower().strip()
 
   if operation == "plus" or operation == "+":
       operation = "+"
-      is_operation_correct = True
+      break
   elif operation == "minus" or operation == "-":
       operation = "-"
-      is_operation_correct = True
+      break
   elif operation == "divide" or operation == "/":
       operation = "/"
-      is_operation_correct = True
+      break
   elif operation == "multiply" or operation == "*":
       operation = "*"
-      is_operation_correct = True
+      break
   else:
       print("Invalid operation. Please enter one of the following types: +, -, /, *")
-      continue
 
-  print(f"Current calculation: _ {operation} _")
-
+print(f"Current calculation: _ {operation} _")
 
 
-first_number = float(input("Enter the first number for your calculation: ")).strip()
+while True:
+    try:
+        first_number = float(input("Enter the first number for your calculation: "))
+        break
+    except ValueError:
+        print("Invalid number. Please enter a valid number.")
+
 print(f"Current calculation: {first_number} {operation} _")
 
-second_number = float(input("Enter the second number for your calculation: ")).strip()
+while True:
+    try:
+        second_number = float(input("Enter the second number for your calculation: "))
+        break
+    except ValueError:
+        print("Invalid number. Please enter a valid number.")
+
 print(f"Current calculation: {first_number} {operation} {second_number}")
 
 print("Calculating...")
