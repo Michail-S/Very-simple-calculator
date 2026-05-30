@@ -1,9 +1,15 @@
 # Import a module to freeze the program for a specifc period of time if needed
 import time
 
+# By toggling this to true the program will skip all the fake loading
+skip_loading = False
+
 # Welcome screen
 print("Welcome")
-time.sleep(1)
+if skip_loading:
+  pass
+else:
+  time.sleep(1)
 
 # Operation type selection
 while True:
@@ -46,7 +52,10 @@ while True:
 
 print(f"Current calculation: {first_number} {operation} {second_number}")
 print("Calculating...")
-time.sleep(0.5)
+if skip_loading:
+  pass
+else:
+  time.sleep(0.5)
 
 # Do the calculation and print the result
 if operation == "+":
