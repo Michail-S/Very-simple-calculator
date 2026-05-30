@@ -1,9 +1,11 @@
+# Import a module to freeze the program for a specifc period of time if needed
 import time
 
+# Welcome screen
 print("Welcome")
 time.sleep(1)
 
-
+# Operation type selection
 while True:
   operation = input("What operation do you want to perform? (+, -, /, *): ").lower().strip()
 
@@ -24,7 +26,7 @@ while True:
 
 print(f"Current calculation: _ {operation} _")
 
-
+# First number selection
 while True:
     try:
         first_number = float(input("Enter the first number for your calculation: "))
@@ -34,6 +36,7 @@ while True:
 
 print(f"Current calculation: {first_number} {operation} _")
 
+# Second number selection
 while True:
     try:
         second_number = float(input("Enter the second number for your calculation: "))
@@ -42,11 +45,10 @@ while True:
         print("Invalid number. Please enter a valid number.")
 
 print(f"Current calculation: {first_number} {operation} {second_number}")
-
 print("Calculating...")
 time.sleep(0.5)
 
-
+# Do the calculation and print the result
 if operation == "+":
     print(f"Here is the result: {first_number + second_number}")
 elif operation == "-":
