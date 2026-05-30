@@ -2,13 +2,12 @@ import time
 
 
 print("""
- __          __  _                            _          _   _                      _            _       _             
- \ \        / / | |                          | |        | | | |                    | |          | |     | |            
-  \ \  /\  / /__| | ___ ___  _ __ ___   ___  | |_ ___   | |_| |__   ___    ___ __ _| | ___ _   _| | __ _| |_ ___  _ __ 
-   \ \/  \/ / _ \ |/ __/ _ \| '_ ` _ \ / _ \ | __/ _ \  | __| '_ \ / _ \  / __/ _` | |/ __| | | | |/ _` | __/ _ \| '__|
-    \  /\  /  __/ | (_| (_) | | | | | |  __/ | || (_) | | |_| | | |  __/ | (_| (_| | | (__| |_| | | (_| | || (_) | |   
-     \/  \/ \___|_|\___\___/|_| |_| |_|\___|  \__\___/   \__|_| |_|\___|  \___\__,_|_|\___|\__,_|_|\__,_|\__\___/|_|   
-      
+ _      _____ _     ____ ____  _      _____   _____ ____    _____ _     _____   ____ ____  _     ____ _     _     ____ _____ ____  ____ 
+/ \  /|/  __// \   /   _Y  _ \/ \__/|/  __/  /__ __Y  _ \  /__ __Y \ /|/  __/  /   _Y  _ \/ \   /   _Y \ /\/ \   /  _ Y__ __Y  _ \/  __\
+| |  |||  \  | |   |  / | / \|| |\/|||  \      / \ | / \|    / \ | |_|||  \    |  / | / \|| |   |  / | | ||| |   | / \| / \ | / \||  \/|
+| |/\|||  /_ | |_/\|  \_| \_/|| |  |||  /_     | | | \_/|    | | | | |||  /_   |  \_| |-||| |_/\|  \_| \_/|| |_/\| |-|| | | | \_/||    /
+\_/  \|\____\\____/\____|____/\_/  \|\____\    \_/ \____/    \_/ \_/ \|\____\  \____|_/ \|\____/\____|____/\____/\_/ \| \_/ \____/\_/\_\
+                                                                                                                                        
 """)
 time.sleep(1)
 
@@ -16,7 +15,7 @@ time.sleep(1)
 
 is_operation_correct = False
 while is_operation_correct == False:
-  operation = input("What operation do you want to perform? (+, -, /, *): ").lower()
+  operation = input("What operation do you want to perform? (+, -, /, *): ").lower().strip()
 
   if operation == "plus" or operation == "+":
       operation = "+"
@@ -38,10 +37,10 @@ while is_operation_correct == False:
 
 
 
-first_number = float(input("Enter the first number for your calculation: "))
+first_number = float(input("Enter the first number for your calculation: ")).strip()
 print(f"Current calculation: {first_number} {operation} _")
 
-second_number = float(input("Enter the second number for your calculation: "))
+second_number = float(input("Enter the second number for your calculation: ")).strip()
 print(f"Current calculation: {first_number} {operation} {second_number}")
 
 print("Calculating...")
