@@ -82,7 +82,7 @@ while True:
     else:
       print("Please enter yes or no!")
       continue
-  if not another_calculation == "yes" or not another_calculation == "y":
+  if not another_calculation == "yes" and not another_calculation == "y":
     break
   
 
