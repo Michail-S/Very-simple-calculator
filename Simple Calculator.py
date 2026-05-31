@@ -3,9 +3,7 @@ import time
 
 # Define a loading function to make the code cleaner
 def loading(seconds):
-  if skip_loading:
-    pass
-  else:
+  if not skip_loading:
     time.sleep(seconds)
 
 # By toggling this to true the program will skip all the fake loading
